@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <ul id="menu">
+          <li id="menuMain">Главная</a></li>
+          <li id="menuCurrencyRates">Курсы валют</li>
+          <li id="menuCurrencyConverter">Конвертер валюты</li>
+          <li id="menuLoanCalculator">Калькулятор кредитов</li>
+          <li id="menuBuyCryptocurrency" class="menuBuyCryptocurrency">Приобрести криптовалюту</li>
+        </ul>
+          <button id="autorization" class="autorization">Вход в банк</button>
+          <div id="log_in">
+            <form action="">
+              <input id="name_in" type="text" placeholder="Введите name">
+              <input id="email_in" type="email" placeholder="Введите email">
+              <input id="password_in" type="password" placeholder="Введите пороль">
+              <button id="btn_in" class="btn_in" type="button">Войти</button>              
+            </form>
+          </div>
+          <div id="userName">
+            
+          </div>
+      </header>
+      <section class="main_container" id="main_container">
+        <h1>ДОБРО ПОЖАЛОВАТЬ В НАШ БАНК</h1>
+      </section>
+      <section class="container1" id="container1">
+          <h2>Курсы валют в Минске на сегодня</h2>
+          <table class="tableValute">
+              <thead>
+                  <tr class="trValute">
+                      <th>Банк</th>
+                      <th>USD</th>
+                      <th>EUR</th>
+                      <th>RUB</th>                        
+                      <th>UAH</th>
+                      <th>PLN</th>                        
+                  </tr>
+                  
+              </thead>
+              <tbody id="bodyTable">
+
+              </tbody>
+          </table>
+      </section>
+          
+      <section class="container2" id="container2">
+          <h2>Конвертер валюты</h2>
+          <form>
+                  
+                  <select id="one">
+                      <option>BYN</option>
+                      <option>USD</option>
+                      <option>EUR</option>
+                      <option>RUB</option>
+                  </select>
+                  <input type="text" id="oneInput" placeholder="0.0000">
+              
+                  <select id="one" disabled>
+                      <option>BYN</option>                        
+                  </select>
+                  <input type="text" id="twoInput" placeholder="0.0000" readonly>
+                                
+          </form>
+      </section>
+
+      <section class="container3" id="container3">
+        <h2>Калькулятор кредитов</h2>
+        <form>
+          <p>Цель кредита</p>
+            <select id="loanPurpose">
+              <option>Потребительские нужды</option>
+              <option>Услуги</option>
+              <option>Товары и имущество</option>
+              <option>На погашение кредитов</option>
+            </select>
+          
+          <p>Процентная ставка</p>
+            <input type="text" id="interestRate" readonly value="13.1">
+          <p>Сумма кредита</p>
+          <input type="number" id="amountOfCredit" placeholder="от 200 до 20000" value="200">
+          <p>Cрок кредита (в месяцах)</p>
+          <select id="loanTerm">
+            <option>6</option>
+            <option>12</option>
+            <option>18</option>
+            <option>24</option>
+          </select> 
+          <div class="container3_buttons">
+            <button type="button" id="calculateLoan" class="calculateLoan">Рассчитать</button>
+            <button type="button" id="clearCalculation" class="clearCalculation">Очистить</button>
+          </div>
+          
+          
+          <p>Ежемесячная выплата</p>
+            <input type="text" id="monthlyPayment" readonly>
+          <p>Итоговая выплата</p>
+            <input type="text" id="finalPayout" readonly>
+        </form>
+      </section>
+
+      <section id="container4" class="container4">
+        <h2>Криптовалюта</h2>
+        <div>
+          <span>Тип</span>
+          <select id="typeOfCryptocurrency">          
+            <option>Биткоин</option>
+            <option>Ефир</option>
+          </select>
+          <span>Количество:</span>
+            <input type="number" id="numberOfCryptocurrencies" >
+  
+          <button type="button" class="buy" id="buy">Купить</button>
+        </div>
+        
+
+      </section>
+
+      <section id="container_autorization" class="container_autorization">
+        <h2>Личный кабинет</h2>
+        <div id="infoUser" class="infoUser"></div>
+      </section>
+
+
+      
+      
+  </div>
+  <script src="bundle.js"></script></body>
+</html>
