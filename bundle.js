@@ -169,13 +169,13 @@ let numberOfCryptocurrencies = document.getElementById('numberOfCryptocurrencies
 function addCryptocurrencies() {
   if (numberOfCryptocurrencies.value > 0) {
     let date = new Date();
-    _login_login_js__WEBPACK_IMPORTED_MODULE_0__["user"].transactionHistory.push({});
-    let oldItem = [];
+    var oldItem = [];
 
-    if (oldItem.length > 0) {
-      oldItem = [JSON.parse(localStorage.getItem('test'))];
+    if (JSON.parse(localStorage.getItem('test')) !== null) {
+      oldItem = JSON.parse(localStorage.getItem('test'));
     }
 
+    ;
     oldItem.push({
       date: `${date.getDate()}.${date.getMonth()}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`,
       type: typeOfCryptocurrency.value,
